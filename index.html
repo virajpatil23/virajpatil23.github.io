@@ -85,13 +85,12 @@ nav.scrolled{box-shadow:var(--shadow);}
 .btn-ghost{color:var(--ink2);font-size:0.875rem;font-weight:500;text-decoration:none;border:1px solid var(--border2);padding:0.8rem 1.5rem;border-radius:24px;transition:border-color .2s,color .2s,transform .15s;display:inline-block;}
 .btn-ghost:hover{border-color:var(--accent);color:var(--accent);transform:translateY(-2px);}
 
-/* PHOTO — 2x2 grid with 4 images only */
+/* PHOTO — single profile picture */
 .hero-right{position:relative;z-index:2;display:flex;justify-content:center;align-items:center;}
-.photo-ring{width:380px;height:380px;border-radius:50%;background:conic-gradient(from 0deg, var(--accent) 0%, var(--accent2) 25%, var(--border) 30%, var(--border) 100%);padding:3px;animation:spin 12s linear infinite;}
+.photo-ring{width:360px;height:360px;border-radius:50%;background:conic-gradient(from 0deg, var(--accent) 0%, var(--accent2) 25%, var(--border) 30%, var(--border) 100%);padding:4px;animation:spin 12s linear infinite;}
 @keyframes spin{from{transform:rotate(0deg);}to{transform:rotate(360deg);}}
-.photo-collage{width:100%;height:100%;border-radius:50%;overflow:hidden;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:3px;background:var(--border);animation:spin 12s linear infinite reverse;}
-.photo-slot{background:var(--bg2);display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:0.65rem;color:var(--muted);text-align:center;gap:0.4rem;}
-.photo-slot img{width:100%;height:100%;object-fit:cover;}
+.photo-single{width:100%;height:100%;border-radius:50%;overflow:hidden;background:var(--bg2);}
+.photo-single img{width:100%;height:100%;object-fit:cover;object-position:center top;}
 
 .scroll-hint{position:absolute;bottom:2.5rem;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:0.5rem;color:var(--muted);font-size:0.72rem;letter-spacing:0.08em;text-transform:uppercase;animation:fadeIn 1s .8s both;z-index:2;}
 .scroll-hint .arrow{animation:bounce 1.5s ease-in-out infinite;}
@@ -303,12 +302,8 @@ footer{text-align:center;padding:2.5rem 5vw;border-top:1px solid var(--border);b
 
   <div class="hero-right">
     <div class="photo-ring">
-      <!-- FIX: 2x2 grid, 4 images only -->
-      <div class="photo-collage">
-        <div class="photo-slot"><img src="hero/hero-headshot.jpeg" alt="Viraj Patil"/></div>
-        <div class="photo-slot"><img src="hero/hero-sih-presentation.jpeg" alt="Presenting at Smart India Hackathon"/></div>
-        <div class="photo-slot"><img src="hero/hero-team-award.jpeg" alt="Team award ceremony"/></div>
-        <div class="photo-slot"><img src="hero/hero-casual.jpeg" alt="Viraj Patil"/></div>
+      <div class="photo-single">
+        <img src="hero/hero-headshot.jpeg" alt="Viraj Patil"/>
       </div>
     </div>
   </div>
@@ -370,7 +365,7 @@ footer{text-align:center;padding:2.5rem 5vw;border-top:1px solid var(--border);b
   <h2 class="sec-title">Education & <em>Activities</em></h2>
   <div class="tl">
     <div class="tl-item reveal">
-      <div class="tl-date">2022 – 2026</div>
+      <div class="tl-date">2023 – 2026</div>
       <div class="tl-title">B.Tech — Computer Science (AI)</div>
       <div class="tl-sub">Nutan College of Engineering and Research, Pune</div>
       <div class="tl-desc">Specialising in Artificial Intelligence. Built multiple production AI projects including RAG systems, clinical NLP pipelines, and accessibility-focused AI applications.</div>
